@@ -17,12 +17,14 @@ const dotenv = require('dotenv');
 
 // const { auth } = require('express-openid-connect');
 
+//const { auth } = require('express-openid-connect');
+
 const config = {
   authRequired: false,
   auth0Logout: true,
   secret: 'a long, randomly-generated string stored in env',
-  baseURL: 'https://newonefinalvideochattingapplication.onrender.com/',
-  clientID: 'kI7Gehgc11Cf2knZXjvyn0anPVAH89zQ',
+  baseURL: 'https://newonefinalvideochattingapplication.onrender.com',
+  clientID: 't8YCooBA1LgVesP4CpQEwtAKVuU9PsPa',
   issuerBaseURL: 'https://dev-qtyga85kh8fhzaqi.us.auth0.com'
 };
 
@@ -33,6 +35,26 @@ app.use(auth(config));
 app.get('/login', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
+
+
+
+
+//const config = {
+//  authRequired: false,
+//  auth0Logout: true,
+//  secret: 'a long, randomly-generated string stored in env',
+//  baseURL: 'https://newonefinalvideochattingapplication.onrender.com/',
+//  clientID: 'kI7Gehgc11Cf2knZXjvyn0anPVAH89zQ',
+//  issuerBaseURL: 'https://dev-qtyga85kh8fhzaqi.us.auth0.com'
+//};
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+//app.use(auth(config));
+
+// req.isAuthenticated is provided from the auth router
+//app.get('/login', (req, res) => {
+ // res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+//});
 
 // app.get("/",(req,res)=>{
 //     res.send("hello")
