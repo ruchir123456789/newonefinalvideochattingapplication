@@ -1,0 +1,73 @@
+<html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+      </script>
+    <script></script>
+    <script></script>
+    <script src="/socket.io/socket.io.js" defer></script> 
+    <!-- this srcipt file bascially adds the socket files from socket.io to the server of our file and then bring it from their to our index.ejs files -->
+    <script src="/indexscript.js" defer></script>
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+
+    
+</head>
+<body>
+    
+    <div id="main">
+      <div id="particepents">
+        <!-- <textarea name="text" id="textarea">
+          
+        </textarea>
+        <button id="submit">subit ji</button>
+     <hr>
+        <a href="" id="meating">get meating </a>
+        <a href="" id="instantmeat">Instant Meat </a> -->
+
+      </div>
+
+      <div id="roomid1">
+h 
+<div></div>
+<div id="video-Grid"></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+      </div>
+
+      <div id="chatset"></div>
+
+    </div>
+</body>
+</html></html>
+
+
+<script>
+  let textarea = document.getElementById("textarea")
+  let meating = document.getElementById("meating")
+  document.querySelector("#submit").addEventListener("click",(e)=>{
+          let value = textarea.value;
+          console.log(textarea.value);
+          alert(textarea.value)
+          console.log(window.location.href)
+          console.log(window.location.href+`/${value}`)
+
+          meating.setAttribute("href",window.location.href+"start"+`/${value}`)
+          meating.setAttribute("href",window.location.href+"start")
+  })
+
+</script>

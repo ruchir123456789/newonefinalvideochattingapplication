@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobilestyle.css"> -->
+    <link rel="stylesheet" href="meating.css">
+    <link rel="stylesheet" href="mobilemeating.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- t -->
+    
+</head>
+<body>
+    <div>
+        <!-- hello ji  -->
+    </div>
+    <div id="main">
+
+
+
+        <div id="page">
+            <!-- <nav>
+                <div class="logo">
+                    <img src="./images/CColorful_Abstract_Illustrative_Stream_Studio_Logo-removebg-preview" alt=""> -->
+                    <!-- <img style=" width:100px; height:100px; "  id="logo" src="./images/Colorful_Abstract_Illustrative_Stream_Studio_Logo-removebg-preview.png" alt="">
+                </div>
+               <div id="navitem"> <li> About</li>
+                <li> Contact</li>
+                <li>Our Services</li>
+                <li>Login</li></div> -->
+            <!-- </nav> -->
+
+
+
+
+            <!-- ============= -->
+            <!-- <div></div> -->
+            <nav class="navbar navbar-expand-lg  bg-$purple" >
+                <div class="container-fluid">
+                  <div class="container-fluid">
+                    <nav class="navbar bg-body-tertiary">
+                      <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                          <img src="/images/Colorful_Abstract_Illustrative_Stream_Studio_Logo-removebg-preview.png" style="width: 50px;">
+                          <!-- Bootstrap -->
+                          Stream
+                        </a>
+                        </div>
+                        </nav>
+                  <!-- <a class="navbar-brand" href="#">Stream</a> -->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li> -->
+                      <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                      </li>                   
+                         <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                      </li>                      <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                      </li>                      <li class="nav-item">
+                        <a class="nav-link" href="/services">Services</a>
+                      </li>
+                      <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>--> 
+                        <!--<ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul> -->
+                      <!-- </li> --> 
+                    <!-- --> 
+                      <!-- <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                      </li> -->
+                    </ul>
+                    <!-- <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                  </div>
+                </div>
+              </nav>
+
+              <!-- ========= -->
+
+            <div id="mainblock">
+         <h1 style="margin-left: 20vh; margin-top: 20px;">Welcome to the meating <br> By stream  <br> <hr> <i><a href="login" style="width: 200px; height: 100px; text-decoration: none; background-color:#7F79E5; padding: 10px; margin: 1vh; color: white; text-size:20px; font-size: 30px;">LOgin</a></i></h1>
+         <img style="margin-bottom: 20px;" src="./images/animated-isolated-photo-memories-social-media-user-looped-flat-2d-character-hd-footage-with-alpha-channel-colorful-animation-on-transparent-background-for-website-social-media-video.jpg" alt="">
+
+        </div>
+        </div> 
+        <div id="maincontent">
+        <div id="one" >
+        <h1>Get an instant meating <br> started</h1>
+          
+            <input name="text" id="textarea">
+              
+            </input>
+            
+            <button id="submit" class="button">subit ji</button>
+
+            
+            <a href="" id="meating" class="button">get meating </a>
+        </div>
+        <div id="two">
+            <h1>Get an Your personilised instant meating <br> started</h1>
+            <a href="start" id="instantmeat">Instant Meat </a>
+        </div>
+     <img class="img" src="./images/BloR21-1-removebg-preview.png" alt="">
+    </div>
+    <div id="linefooter" style="display: flex; align-items: center; text-align: center; margin-left:10px ; padding: 0     20vh;">
+        <h2 style="color:antiquewhite">COpy write of this projects is reserved by prany bokde and ruchir dongre team of major projext</h2>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+    // let instantmeat =document.querySelector("#instantmeat");
+</script>
+<script>
+    let textarea = document.getElementById("textarea")
+    let meating = document.getElementById("meating")
+    document.querySelector("#submit").addEventListener("click",(e)=>{
+            let value = textarea.value;
+            console.log(textarea.value);
+            alert(textarea.value)
+            console.log(window.location.href)
+            console.log(window.location.href+`/${value}`)
+        
+            // meating.setAttribute("href",window.location.href+"start"+`/${value}`)
+            meating.setAttribute("href",window.location.href+`${value}`)
+            // meating.setAttribute("href",window.location.href+"start")
+            instantmeat.setAttribute("href",window.location.href+"/start")
+
+        })
+  
+  </script>

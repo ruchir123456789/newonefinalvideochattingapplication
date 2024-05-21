@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const ROOM_ID = "<%= roomId %>"
+
+
+    </script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="mobilecss1111.css">
+    <style>
+        #video{
+            /* display: grid;
+            grid-template-rows: repeat(auto-fill, 300px);
+            grid-auto-rows: 300px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* flex-wrap: wrap; */
+            /* flex-direction: row; */
+            width: 300px;
+            gap: 20px;
+            height: 200px;
+            
+        }
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* border: 2px solid rgb(94, 168, 247); */
+            border: 2px solid rgb(78, 79, 80);
+            box-shadow: var(#000,);
+
+        }
+        #video1{
+            display: none;
+            /* display: grid;
+            grid-template-columns: repeat(auto-fill, 300px); */
+            grid-auto-rows: 300px;
+            width: 300px;
+            height: 300px;
+            background-color: aquamarine;
+            position: absolute;
+            top: 90px;
+            left: 90px;
+        }
+    </style>
+    <script defer src="https://unpkg.com/peerjs@1.5.1/dist/peerjs.min.js"></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="client.js" defer></script>
+</head>
+<body>
+        <div id="all">
+    <div id="main1">
+        <nav>
+            <div id="right"><h2>Chating application</h2></div>
+            <div id="left">
+                <i class="ri-menu-3-fill" id="menu" id="arrowicon"></i>
+
+               <a href="#main1"> <h2 id="text">Home</h2></a>
+               <a href="#services"> <h2 id="text">Our Services</h2></a>
+               <a href="#about"> <h2 id="text">About Us</h2></a>
+               <a href="#howtouse"> <h2 id="text">How To Use</h2></a>           
+                <!-- <a href="#howtouse"> <h2 id="text">How To Use</h2></a> -->
+               <a href="#people"> <h2 id="text">People in the Meating</h2></a>
+               <!-- <i class="ri-menu-3-fill" id="menu"></i> -->
+            </div>
+        </nav>
+        <div id="main">
+            <div id="prompt">
+                <form action="">
+                    <label for="fname">Name : </label><br>
+                    <input type="text" id="fname" name="fname" placeholder="Enter your name" ><br>
+                    <label for="lname">Email : </label><br>
+                    <input type="email" id="lname" name="lname" placeholder="Enter your email" ></input><br><br>
+                    <!-- <input type="submit" id="submit" value="submit"> -->
+                    <!-- <input type="button" id="submit" value="submit"> -->
+                    <button type="button" id="submit" value="">submit</button>
+                    
+                </form>
+                <h1>Copy meating Id <i class="ri-share-line" id="frontbutton"></i></h1>
+                
+            </div>
+        <!-- <h1 id="show-peer">hello ji</h1> -->
+        <!-- <input name="" id="peerId" cols="10" rows="1"></input> -->
+        <!-- <button id="call-peer">call peer</button> -->
+        <!-- <br> -->
+        <!-- <div id="ourVideo">Our Video</div>
+        <div id="remoteVideo">remote Video</div> -->
+        <!-- <button id="shareScreen">Share Screen</button> -->
+
+        <div id="video"></div>
+        <!-- <div id="video1"></div> -->
+        <div id="button">
+            <div id="screenshare" class="btn"><i class="ri-screenshot-2-line"></i></div>
+            <div id="callend" class="btn"><i class="ri-movie-line"></i></div>
+            <div id="chat"  class="btn"><i class="ri-message-3-line"></i></div>
+            <div id="sharelink" class="btn"><i class="ri-share-line"></i></div>
+            
+        </div>
+        <!-- <div id="chattingscreen">
+              <div id="form" action="">
+                <input type="text" id="input" />
+                <button>send</button>
+              </div>  
+        </div> -->
+    </div>
+    </div>
+    <div id="chatpage">
+        <section class="chat_section">
+            <i class="ri-arrow-left-line" id="arrow5" id="icon"></i>
+
+            <!-- <div id="show-peer"></div> -->
+            <div class="brand">
+                <h1>Wassup</h1>
+                <!-- <h1 id="show-peer"></h1> -->
+            </div>
+            <div class="message__area">
+                <!-- <div class="incoming message">
+                    <h4>Name</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi et reprehenderit, maxime est libero officiis harum aspernatur autem sequi laudantium.</p>
+                </div>
+                <div class="outgoing message">
+                    <h4>Name1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iusto quaerat rerum sequi harum accusamus rem reiciendis, modi fugit incidunt?</p>
+                </div> -->
+            </div>
+            <div>
+                <textarea name="" id="textarea" cols="30" rows="1" placeholder="write a message...."></textarea>
+            </div>
+        </section>
+
+    </div>
+    <div id="main-menu">
+        <i class="ri-arrow-left-line" id="arrow" id="arrowicon"></i>
+        <a href="#main1" id="link1"><h1>Home</h1></a>
+        <a href="#services" id="link2"><h1>Our Services</h1></a>
+        <a href="#about" id="link3"><h1>About Us</h1></a>
+        <a href="#howtouse" id="link4"><h1>How To Use</h1></a>
+<a href="#main1" id="link5">                <h1>Back To Screen</h1></a>
+<a href="#people" id="link6"><h1>People in the meating</h1></a>
+
+    </div>
+    <div id="services" class="page"> 
+        
+        <!-- <h1>hello ji</h1> -->
+        <i class="ri-arrow-left-line" id="arrow1" id="arrowicon" ></i>
+        <div id="content">
+            <div>
+                <h1>Services we provide</h1><br>
+                <p>We provide chating services, we enable the prople from differefnt bart of the world to connect to each other through our application</p><br>
+                <p>We provide various features like</p><br>
+                <p>Video chatting features:</p>
+                <p>we here have one to one video chatting call-peer</p><br>
+                <p>Text chatting feature:</p>
+                <p>We have a common Text Chatting room for all the participants</p><br>
+                <p>Participants record room:</p>
+                <p>We have a record of the all the participants of the Meating</p><br>
+                <p>Screen share feture:</p>
+                <p>We have a Screen Sharing Features</p><br>
+            </div>
+                 <img src="2 (2).png" alt="">
+        </div>
+    </div>
+    <div id="about" class="page">
+        <i class="ri-arrow-left-line" id="arrow2" id="arrowicon"></i>
+        <div id="content">
+            <img src="2 (1).png" alt="">
+
+            <div>
+               <h1>About this application</h1><br>
+               <p>This is an application based on Node JS , Express JS , WEBrtc , SOCKET.IO , Peer JS</p><br>
+               <p>Backend :</p>
+               <p>We have used Node JS and Express JS and many more technology to write the backend part of the project</p><br>
+               <p>Frontend :</p>
+               <p>We have used HTML , CSS , JS , GSAP and many more technology</p><br>
+               <p>Video chatting :</p>
+               <p>We have made video cahhating by using Peer JS , WEBrtc and  many more technology</p><br>
+               <p>Text chatting :</p>
+               <p>We have made text chatting through using SOCKETT.IO , UUID and  many more technology</p><br>
+               <p>Screen Share feature :</p>
+               <p>We have made Screen sharing feature by using Frontend Java Script windows , navigator and  many more technology</p><br>
+            </div>
+        </div>
+
+    </div>
+    <div id="howtouse" class="page">
+        <i class="ri-arrow-left-line" id="arrow3" id="arrowicon"></i>
+        <div id="content">
+            <div id="inner-content">
+                <img src="5.png" alt="">
+
+            </div>
+            <div id="inner-content">
+                <img src="7.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <div id="people" class="page">
+        <i class="ri-arrow-left-line" id="arrow7" id="icon">
+        
+
+        </i>
+        <h1 id="numberofpeople"></h1>
+        <h1>people record</h1>
+
+        <div id="numberofpeople1">
+            <!-- <h1>people record</h1> -->
+        </div>
+        <!-- <h1>people</h1> -->
+    </div>
+    
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+     <script src="gsapscript.js"></script>
+</body>
+</html>
