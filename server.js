@@ -21,7 +21,7 @@ const config = {
   authRequired: false,
   auth0Logout: true,
   secret: 'a long, randomly-generated string stored in env',
-  baseURL: 'http://localhost:3000',
+  baseURL: 'https://newonefinalvideochattingapplication.onrender.com/',
   clientID: 'kI7Gehgc11Cf2knZXjvyn0anPVAH89zQ',
   issuerBaseURL: 'https://dev-qtyga85kh8fhzaqi.us.auth0.com'
 };
